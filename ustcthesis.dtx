@@ -707,21 +707,11 @@ version 2005/12/01 or later.
 \RequirePackage{xstring}
 \str_if_eq:onT { \g__ctex_fontset_tl } { mac }
   {
-    \setCJKmainfont
-      [
-           UprightFont = *~Light,
-              BoldFont = *~Bold,
-            ItalicFont = Kaiti~SC,
-        BoldItalicFont = Kaiti~SC~Bold
-      ] { Songti~SC }
-    \setCJKsansfont { Heiti~SC }
-    \setCJKfamilyfont { zhsong }
-      [
-           UprightFont = *~Light,
-              BoldFont = *~Bold,
-      ] { Songti~SC }
-    \setCJKfamilyfont { zhhei } { Heiti~SC }
-    \setCJKfamilyfont { zhkai } { Kaiti~SC }
+    \setCJKmainfont[AutoFakeBold, ItalicFont=STKaiti]{STSong}
+    \setCJKsansfont[AutoFakeBold]{STXihei}
+    \setCJKfamilyfont{zhsong}[AutoFakeBold]{STSong}
+    \setCJKfamilyfont{zhhei}[AutoFakeBold]{STXihei}
+    \setCJKfamilyfont{zhkai}[AutoFakeBold]{STKaiti}
   }
 \str_if_eq:onT { \g__ctex_fontset_tl } { windows }
   {
